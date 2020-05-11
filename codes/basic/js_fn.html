@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>工具函数 | K12Code</title>
+    <meta name="description" content="k12常用代码库">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.cc546c36.css" as="style"><link rel="preload" href="/assets/js/app.9504a2bd.js" as="script"><link rel="preload" href="/assets/js/2.f2e23047.js" as="script"><link rel="preload" href="/assets/js/12.8aa7bd96.js" as="script"><link rel="prefetch" href="/assets/js/10.0aa0b5e0.js"><link rel="prefetch" href="/assets/js/11.f9dcb335.js"><link rel="prefetch" href="/assets/js/13.4ad07f84.js"><link rel="prefetch" href="/assets/js/14.4eac6c57.js"><link rel="prefetch" href="/assets/js/15.f6d69329.js"><link rel="prefetch" href="/assets/js/16.37ddd90d.js"><link rel="prefetch" href="/assets/js/17.42f57a62.js"><link rel="prefetch" href="/assets/js/18.f93675b3.js"><link rel="prefetch" href="/assets/js/19.2a45d701.js"><link rel="prefetch" href="/assets/js/20.d2ef518d.js"><link rel="prefetch" href="/assets/js/3.17c4e8d1.js"><link rel="prefetch" href="/assets/js/4.6ace31c4.js"><link rel="prefetch" href="/assets/js/5.4693b224.js"><link rel="prefetch" href="/assets/js/6.668d646f.js"><link rel="prefetch" href="/assets/js/7.9e11787b.js"><link rel="prefetch" href="/assets/js/8.025241ee.js"><link rel="prefetch" href="/assets/js/9.7bc37877.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cc546c36.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/favicon.ico" alt="K12Code" class="logo"> <span class="site-name can-hide">K12Code</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/codes/basic/js_fn.html" class="nav-link router-link-exact-active router-link-active">
+  代码片段
+</a></div><div class="nav-item"><a href="/components/" class="nav-link">
+  组件库
+</a></div><div class="nav-item"><a href="/bug_tip/" class="nav-link">
+  知识库
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/codes/basic/js_fn.html" class="nav-link router-link-exact-active router-link-active">
+  代码片段
+</a></div><div class="nav-item"><a href="/components/" class="nav-link">
+  组件库
+</a></div><div class="nav-item"><a href="/bug_tip/" class="nav-link">
+  知识库
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>前端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/codes/basic/js_fn.html" class="active sidebar-link">工具函数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/codes/basic/css.html" class="sidebar-link">CSS</a></li><li><a href="/codes/basic/regular.html" class="sidebar-link">正则表达式</a></li><li><a href="/codes/basic/vue.html" class="sidebar-link">vue</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="工具函数"><a href="#工具函数" class="header-anchor">#</a> 工具函数</h1> <p></p><div class="table-of-contents"><ul><li><a href="#获取uuid">获取UUID</a></li><li><a href="#url参数转对象">url参数转对象</a></li><li><a href="#识别ie">识别ie</a></li><li><a href="#验证证件-身份证或其他证件">验证证件 (身份证或其他证件)</a></li><li><a href="#密码验证">密码验证</a></li><li><a href="#验证手机号">验证手机号</a></li><li><a href="#邮箱验证">邮箱验证</a></li></ul></div><p></p> <h3 id="获取uuid"><a href="#获取uuid" class="header-anchor">#</a> 获取UUID</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">GlobalGetUuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> uuid <span class="token operator">=</span> <span class="token string">'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/[xy]/g</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> r <span class="token operator">=</span> <span class="token punctuation">(</span>d <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">16</span> <span class="token operator">|</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    d <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>d<span class="token operator">/</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>c<span class="token operator">==</span><span class="token string">'x'</span> <span class="token operator">?</span> r <span class="token operator">:</span> <span class="token punctuation">(</span>r<span class="token operator">&amp;</span><span class="token number">0x7</span><span class="token operator">|</span><span class="token number">0x8</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> uuid<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="url参数转对象"><a href="#url参数转对象" class="header-anchor">#</a> url参数转对象</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @param {string} url
+ * @returns {Object}
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">param2Obj</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> search <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'?'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>search<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>
+    <span class="token string">'{&quot;'</span> <span class="token operator">+</span>
+      <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span>search<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/&quot;/g</span><span class="token punctuation">,</span> <span class="token string">'\\&quot;'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/&amp;/g</span><span class="token punctuation">,</span> <span class="token string">'&quot;,&quot;'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/=/g</span><span class="token punctuation">,</span> <span class="token string">'&quot;:&quot;'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/\+/g</span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+      <span class="token string">'&quot;}'</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="识别ie"><a href="#识别ie" class="header-anchor">#</a> 识别ie</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 识别ie--浅识别
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">isIe</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> explorer <span class="token operator">=</span> window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">;</span>
+        <span class="token comment">//判断是否为IE浏览器</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>explorer<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">&quot;MSIE&quot;</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="验证证件-身份证或其他证件"><a href="#验证证件-身份证或其他证件" class="header-anchor">#</a> 验证证件 (身份证或其他证件)</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/** 验证证件 (身份证或其他证件) */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">validateCards</span><span class="token punctuation">(</span><span class="token parameter">rule<span class="token punctuation">,</span> value<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> reg <span class="token operator">=</span> <span class="token regex">/^[1-9][0-9]{5}([1][9][0-9]{2}|[2][0][0-9]{2})([0][1-9]|[1][0|1|2])([0][1-9]|[1|2][0-9]|[3][0|1])[0-9]{3}([0-9]|[X|x])$/</span>
+  <span class="token keyword">const</span> regOther <span class="token operator">=</span> <span class="token regex">/^[A-Za-z0-9]{8,18}$/</span>
+  <span class="token keyword">const</span> title <span class="token operator">=</span> rule<span class="token punctuation">.</span>title <span class="token operator">||</span> <span class="token string">'证件号码'</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>rule<span class="token punctuation">.</span>required <span class="token operator">&amp;&amp;</span> value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>title <span class="token operator">+</span> <span class="token string">'不得为空'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>regOther<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>title <span class="token operator">+</span> <span class="token string">'格式不正确'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="密码验证"><a href="#密码验证" class="header-anchor">#</a> 密码验证</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/** 验证密码 */</span>
+<span class="token comment">/**
+ * 1.密码不得为空
+ * 2.密码不得包含空格
+ * 3.密码不得包含汉字
+ * 4.必须包含大写、小写字母及数字，8-20位
+ * @export
+ * @param {*} rule
+ * @param {*} value
+ * @param {*} callback
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">validatePwd</span><span class="token punctuation">(</span><span class="token parameter">rule<span class="token punctuation">,</span> value<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> regSpace <span class="token operator">=</span> <span class="token regex">/^\S*$/</span>
+  <span class="token keyword">const</span> regChinese <span class="token operator">=</span> <span class="token regex">/.*[\u4e00-\u9fa5]+.*$/</span>
+  <span class="token keyword">const</span> regRule <span class="token operator">=</span> <span class="token regex">/^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)\S{8,20}$/</span>
+  <span class="token keyword">const</span> title <span class="token operator">=</span> rule<span class="token punctuation">.</span>title <span class="token operator">||</span> <span class="token string">'密码'</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>rule<span class="token punctuation">.</span>required <span class="token operator">&amp;&amp;</span> value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>title <span class="token operator">+</span> <span class="token string">'不得为空'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>regSpace<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>title <span class="token operator">+</span> <span class="token string">'不得包含空格'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>regChinese<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>title <span class="token operator">+</span> <span class="token string">'不得包含汉字'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>regRule<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>title <span class="token operator">+</span> <span class="token string">'必须包含大写、小写字母及数字，8-20位'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="验证手机号"><a href="#验证手机号" class="header-anchor">#</a> 验证手机号</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/** 验证手机号 */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">validateMobile</span><span class="token punctuation">(</span><span class="token parameter">rule<span class="token punctuation">,</span> value<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> reg <span class="token operator">=</span> <span class="token regex">/^1\d{10}$/</span>
+  <span class="token keyword">const</span> title <span class="token operator">=</span> rule<span class="token punctuation">.</span>title <span class="token operator">||</span> <span class="token string">'手机号码'</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>rule<span class="token punctuation">.</span>required <span class="token operator">&amp;&amp;</span> value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>title <span class="token operator">+</span> <span class="token string">'不得为空'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>title <span class="token operator">+</span> <span class="token string">'格式不正确'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="邮箱验证"><a href="#邮箱验证" class="header-anchor">#</a> 邮箱验证</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">rule<span class="token punctuation">,</span> value<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token regex">/^\S*$/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'邮箱不得包含空格'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    value <span class="token operator">!=</span> <span class="token string">''</span> <span class="token operator">&amp;&amp;</span>
+    <span class="token regex">/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>
+      value
+    <span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token boolean">false</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'邮箱格式不正确'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="http://gl.k12cloud.cn/xuegang/k12-code/edit/develop/docs/codes/basic/js_fn.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面😄</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">4/22/2020, 4:26:13 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/codes/basic/css.html">
+        CSS
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.9504a2bd.js" defer></script><script src="/assets/js/2.f2e23047.js" defer></script><script src="/assets/js/12.8aa7bd96.js" defer></script>
+  </body>
+</html>
